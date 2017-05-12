@@ -7,28 +7,12 @@
             <h1><a href="">Olha's Blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 01.02.2017, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Python is a widely used high-level programming language
-                for general-purpose programming created by Guido van Rossum
-                and first released in 1991. An interpreted language, Python
-                has a design philosophy which emphasizes code readability
-                (notably using whitespace indentation to delimit code blocks
-                rather than curly braces or keywords), and a syntax which
-                allows programmers to express concepts in fewer lines of code
-                than possible in languages such as C++ or Java.</p>
-        </div>
-
-        <div>
-            <p>published: 05.05.2017, 12:15</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Django is a free and open-source web framework,
-                written in Python, which follows the
-                model-view-template (MVT) architectural pattern.
-                It is maintained by the Django Software Foundation (DSF),
-                an independent organization established as a 501(c)(3)
-                non-profit.</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
