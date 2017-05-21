@@ -25,7 +25,7 @@ SECRET_KEY = 'ab$c_y6m@6q96enqk$vsvkbynvou+&)ejqd@4g*h@)1#iwh(r!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =  ["olhalesk.pythonanywhere.com", "127.0.0.1"]
+ALLOWED_HOSTS =  ["olhalesk.pythonanywhere.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -119,3 +119,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = '/'
